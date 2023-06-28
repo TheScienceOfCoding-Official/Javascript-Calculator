@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+  <script>
+    function add() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var result = num1 + num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function subtract() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var result = num1 - num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function multiply() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var result = num1 * num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function divide() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var result = num1 / num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  
+  <input type="text" id="num1" placeholder="Enter number 1">
+  <input type="text" id="num2" placeholder="Enter number 2">
+  
+  <div>
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+  </div>
+  
+  <p id="result">Answer!!!: </p>
+</body>
+</html>
